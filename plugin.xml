@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.aub.mobilebanking.uk" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>GoogleWalletPlugin</name>
+    <js-module name="GoogleWalletPlugin" src="www/GoogleWalletPlugin.js">
+        <clobbers target="cordova.plugins.GoogleWalletPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="GoogleWalletPlugin">
+                <param name="android-package" value="com.aub.mobilebanking.uk.GoogleWalletPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+            <source-file src="src/android/GoogleWalletPlugin.java"
+            target-dir="src/com/aub/mobilebanking/uk" />
+            <source-file src="src/android/PendingProvisionRequest.java"
+            target-dir="src/com/aub/mobilebanking/uk" />
+
+        <source-file
+            src="libs/tapandpay_sdk"
+            target-dir="libs" />
+        <framework src="scripts/build.gradle" custom="true" type="gradleReference" />
+
+        <framework src="com.google.android.gms:play-services-base:18.3.0" />
+        <framework src="com.google.android.gms:play-services-basement:18.3.0" />
+        <framework src="com.google.android.gms:play-services-tasks:18.1.0" />
+    </platform>
+</plugin>

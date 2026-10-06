@@ -1,0 +1,17 @@
+{
+  "name": "com.aub.mobilebanking.uk",
+  "version": "1.0.0",
+  "description": "Google Wallet Plugin",
+  "cordova": {
+    "id": "com.aub.mobilebanking.uk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}

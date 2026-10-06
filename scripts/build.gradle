@@ -1,0 +1,16 @@
+
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        // This directory is precreated to store the TapAndPay SDK,
+        // which must be downloaded manually from Google.
+        url "file://${project.rootDir}/app/libs/tapandpay_sdk/"
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+    // Use 'name' to match the filename in the libs folder
+    implementation 'com.google.android.gms:play-services-tapandpay:+'
+}
